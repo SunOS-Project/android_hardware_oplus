@@ -49,7 +49,9 @@ SensorProps SensorPropsInit(SensorProps props) {
                 props.sensorLocations[0].sensorLocationY = y;
             }
         }
-        LOG_IF(WARNING, !loc_parsed) << "Invalid sensor location input (x::y): " << loc_prop;
+        if (!loc_parsed) {
+            LOG(WARNING) << "Invalid sensor location input (x::y): " << loc_prop;
+        }
     }
 
     auto size = GetProperty("persist.vendor.fingerprint.optical.iconsize", "");
