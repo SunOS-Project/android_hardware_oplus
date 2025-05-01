@@ -4,6 +4,11 @@
 # Audio Amplifier
 /dev/aw882xx_smartpa    u:object_r:oplus_awsmartpa_device:s0
 
+# Battery
+/(vendor|system/vendor)/bin/hw/vendor\.sun\.hardware\.battery-service\.oplus      u:object_r:hal_battery_default_exec:s0
+/sys/devices/virtual/oplus_chg/battery/mmi_charging_enable                        u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/virtual/oplus_chg/battery/voocchg_ing                                u:object_r:vendor_sysfs_battery_supply:s0
+
 # Camera
 /data/vendor/camera_update(/.*)?                                                u:object_r:vendor_camera_update_data_file:s0
 /dev/camera_extension_monitor                                                   u:object_r:vendor_camera_turbo_device:s0

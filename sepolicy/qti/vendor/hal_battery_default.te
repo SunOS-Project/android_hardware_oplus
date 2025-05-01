@@ -1,0 +1,5 @@
+rw_dir_file(hal_battery_default, vendor_proc_wireless)
+rw_dir_file(hal_battery_default, vendor_sysfs_battery_supply)
+rw_dir_file(hal_battery_default, vendor_sysfs_usb_supply)
+
+get_prop(hal_battery_default, exported_system_prop)

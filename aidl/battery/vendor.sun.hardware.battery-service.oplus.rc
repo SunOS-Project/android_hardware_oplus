@@ -1,0 +1,22 @@
+# Copyright (C) 2025 The Nameless-CLO Project
+# SPDX-License-Identifier: Apache-2.0
+
+on boot
+    chown system system /proc/wireless/enable_rx
+    chown system system /proc/wireless/enable_tx
+    chown system system /proc/wireless/quiet_mode
+    chown system system /proc/wireless/user_sleep_mode
+    chown system system /sys/class/oplus_chg/battery/mmi_charging_enable
+    chown system system /sys/class/oplus_chg/battery/voocchg_ing
+
+    chmod 0666 /proc/wireless/enable_rx
+    chmod 0666 /proc/wireless/enable_tx
+    chmod 0666 /proc/wireless/quiet_mode
+    chmod 0666 /proc/wireless/user_sleep_mode
+    chmod 0666 /sys/class/oplus_chg/battery/mmi_charging_enable
+    chmod 0666 /sys/class/oplus_chg/battery/voocchg_ing
+
+service vendor.sun_battery /vendor/bin/hw/vendor.sun.hardware.battery-service.oplus
+    class hal
+    user system
+    group system
