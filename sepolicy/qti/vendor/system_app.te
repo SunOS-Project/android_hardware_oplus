@@ -1,2 +1,5 @@
 hal_client_domain(system_app, vendor_hal_display_iris)
 binder_call(system_app, vendor_hal_display_iris_default)
+
+hal_client_domain(system_app, hal_telephony)
+binder_call(system_app, rild)
