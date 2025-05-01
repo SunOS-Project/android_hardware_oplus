@@ -204,6 +204,14 @@
 # URCC
 /(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.urcc-service    u:object_r:hal_oplus_urcc_aidl_exec:s0
 
+# Vibrator
+/(odm|vendor/odm)/etc/vibrator(/.*)?                                                  u:object_r:vendor_vibrator_data_file:s0
+/(vendor|system/vendor)/bin/hw/vendor\.sun\.hardware\.vibratorExt-service\.oplus      u:object_r:hal_vibrator_ext_default_exec:s0
+/sys/devices/platform/soc/a8c000.i2c/i2c-6/6-005a/leds/vibrator/(/.*)?                u:object_r:sysfs_vibrator:s0
+/sys/devices/platform/soc/88c000.i2c/i2c-6/6-005a/leds/vibrator/(/.*)?                u:object_r:sysfs_vibrator:s0
+/sys/devices/platform/soc/88c000.i2c/i2c-11/11-005a/leds/vibrator/(/.*)?              u:object_r:sysfs_vibrator:s0
+/dev/input/(/.*)?                                                                     u:object_r:sysfs_vibrator:s0
+
 # Widevine
 /vendor/bin/wvmkiller    u:object_r:vendor_wvmkiller_exec:s0
 

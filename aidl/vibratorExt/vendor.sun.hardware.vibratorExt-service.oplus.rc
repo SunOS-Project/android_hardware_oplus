@@ -1,0 +1,36 @@
+# Copyright (C) 2025 The Nameless-CLO Project
+# SPDX-License-Identifier: Apache-2.0
+
+on boot
+    chown system system /sys/class/leds/vibrator/activate
+    chown system system /sys/class/leds/vibrator/brightness
+    chown system system /sys/class/leds/vibrator/f0
+    chown system system /sys/class/leds/vibrator/f0_data
+    chown system system /sys/class/leds/vibrator/duration
+    chown system system /sys/class/leds/vibrator/gain
+    chown system system /sys/class/leds/vibrator/rtp
+    chown system system /sys/class/leds/vibrator/vmax
+    chown system system /sys/class/leds/vibrator/waveform_index
+
+    chmod 0666 /sys/class/leds/vibrator/activate
+    chmod 0666 /sys/class/leds/vibrator/brightness
+    chmod 0666 /sys/class/leds/vibrator/f0
+    chmod 0666 /sys/class/leds/vibrator/f0_data
+    chmod 0666 /sys/class/leds/vibrator/duration
+    chmod 0666 /sys/class/leds/vibrator/gain
+    chmod 0666 /sys/class/leds/vibrator/rtp
+    chmod 0666 /sys/class/leds/vibrator/vmax
+    chmod 0666 /sys/class/leds/vibrator/waveform_index
+
+    chown system system /sys/class/qcom-haptics/lra_cal_cl_t_lra_us
+    chown system system /sys/class/qcom-haptics/lra_cal_rc_clk_cal_count
+    chown system system /sys/class/qcom-haptics/lra_calibration
+    chown system system /sys/class/qcom-haptics/lra_frequency_hz
+    chown system system /sys/class/qcom-haptics/lra_impedance
+
+    chmod 0220 /sys/class/qcom-haptics/lra_calibration
+
+service vendor.sun_vibratorExt /vendor/bin/hw/vendor.sun.hardware.vibratorExt-service.oplus
+    class hal
+    user system
+    group system input
