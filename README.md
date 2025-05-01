@@ -4,6 +4,7 @@
 
 | Namespace | Variable | Description | Default |
 | --------- | -------- | ----------- | ------- |
+<<<<<<< HEAD
 | OPLUS_LINEAGE_LIVEDISPLAY_HAL | ENABLE_AB | Enable AdaptiveBacklight feature | false |
 | OPLUS_LINEAGE_LIVEDISPLAY_HAL | ENABLE_AF | Enable AntiFlicker feature | false |
 | OPLUS_LINEAGE_LIVEDISPLAY_HAL | ENABLE_DM | Enable DisplayModes feature | false |
@@ -16,3 +17,6 @@
 | OPLUS_LINEAGE_TOUCH_HAL | USE_OPLUSTOUCH | Use and interface with stock OplusTouch | false |
 | OPLUS_LINEAGE_VIBRATOR_HAL | INCLUDE_DIR | Device specific include dir path | |
 | OPLUS_LINEAGE_VIBRATOR_HAL | USE_EFFECT_STREAM | Enable effect stream feature | false |
+=======
+| QTI_GPT_UTILS | USE_BSG_FRAMEWORK | Enable BSG framework feature | true |
+>>>>>>> b8be43f (oplus: Clean up LineageOS stuff)

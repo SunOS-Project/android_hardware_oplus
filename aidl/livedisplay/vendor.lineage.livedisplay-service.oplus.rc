@@ -1,4 +1,0 @@
-service vendor.livedisplay-hal /vendor/bin/hw/vendor.lineage.livedisplay-service.oplus
-    class late_start
-    user system
-    group system
