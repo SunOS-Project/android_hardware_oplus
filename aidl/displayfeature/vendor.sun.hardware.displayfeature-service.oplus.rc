@@ -1,0 +1,26 @@
+# Copyright (C) 2025 The Nameless-CLO Project
+# SPDX-License-Identifier: Apache-2.0
+
+on boot
+    chown system system /proc/touchpanel/game_switch_enable
+    chown system system /proc/touchpanel/oplus_tp_direction
+    chown system system /sys/kernel/oplus_display/dimlayer_hbm
+    chown system system /sys/kernel/oplus_display/hbm
+    chown system system /sys/kernel/oplus_display/min_fps
+    chown system system /sys/kernel/oplus_display/pwm_onepulse
+    chown system system /sys/kernel/oplus_display/seed
+    chown system system /sys/kernel/oplus_display/test_te
+
+    chmod 0666 /proc/touchpanel/game_switch_enable
+    chmod 0666 /proc/touchpanel/oplus_tp_direction
+    chmod 0666 /sys/kernel/oplus_display/dimlayer_hbm
+    chmod 0666 /sys/kernel/oplus_display/hbm
+    chmod 0666 /sys/kernel/oplus_display/min_fps
+    chmod 0666 /sys/kernel/oplus_display/pwm_onepulse
+    chmod 0666 /sys/kernel/oplus_display/seed
+    chmod 0666 /sys/kernel/oplus_display/test_te
+
+service vendor.sun_displayfeature /vendor/bin/hw/vendor.sun.hardware.displayfeature-service.oplus
+    class hal
+    user system
+    group system

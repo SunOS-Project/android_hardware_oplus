@@ -1,0 +1,9 @@
+<!-- Copyright (C) 2025 The Nameless-CLO Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>vendor.sun.hardware.displayfeature</name>
+        <fqname>IDisplayFeature/default</fqname>
+    </hal>
+</manifest>

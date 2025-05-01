@@ -34,10 +34,21 @@
 /dev/oplus_display                                                  u:object_r:graphics_device:s0
 
 # Display (Pixelworks)
-/(odm|vendor/odm)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service           u:object_r:hal_graphics_composer_default_exec:s0
-/(odm|vendor/odm)/bin/hw/vendor\.pixelworks\.hardware\.feature\.irisfeature-service    u:object_r:hal_graphics_composer_default_exec:s0
-/(odm|vendor/odm)/bin/hw/vendor\.pixelworks\.hardware\.feature-service                 u:object_r:hal_feature_irisfeature_default_exec:s0
+/(odm|vendor/odm)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service           u:object_r:vendor_hal_display_iris_default_exec:s0
+/(odm|vendor/odm)/bin/hw/vendor\.pixelworks\.hardware\.feature\.irisfeature-service    u:object_r:vendor_hal_display_iris_default_exec:s0
+/(odm|vendor/odm)/bin/hw/vendor\.pixelworks\.hardware\.feature-service                 u:object_r:vendor_hal_display_iris_default_exec:s0
 
+# DisplayFeature
+/(vendor|system/vendor)/bin/hw/vendor\.sun\.hardware\.displayfeature-service\.oplus    u:object_r:hal_displayfeature_default_exec:s0
+/sys/kernel/oplus_display/dimlayer_hbm                                                 u:object_r:vendor_sysfs_graphics:s0
+/sys/kernel/oplus_display/hbm                                                          u:object_r:vendor_sysfs_graphics:s0
+/sys/kernel/oplus_display/min_fps                                                      u:object_r:vendor_sysfs_graphics:s0
+/sys/kernel/oplus_display/pwm_onepulse                                                 u:object_r:vendor_sysfs_graphics:s0
+/sys/kernel/oplus_display/seed                                                         u:object_r:vendor_sysfs_graphics:s0
+/sys/kernel/oplus_display/test_te                                                      u:object_r:vendor_sysfs_graphics:s0
+/proc/touchpanel/game_switch_enable                                                    u:object_r:vendor_proc_display:s0
+/proc/touchpanel/oplus_tp_direction                                                    u:object_r:vendor_proc_display:s0
+ 
 # Engineering
 /mnt/vendor/persist/engineermode(/.*)?    u:object_r:vendor_persist_engineer_file:s0
 

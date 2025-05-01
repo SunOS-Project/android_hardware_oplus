@@ -1,0 +1,17 @@
+type vendor_hal_display_iris_default, domain;
+hal_server_domain(vendor_hal_display_iris_default, vendor_hal_display_iris)
+
+type vendor_hal_display_iris_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_display_iris_default)
+
+binder_call(vendor_hal_display_iris_client, vendor_hal_display_iris_server)
+binder_call(vendor_hal_display_iris_server, vendor_hal_display_iris_client)
+
+binder_call(vendor_hal_display_iris_default, hal_graphics_composer_default)
+
+hal_attribute_hwservice(vendor_hal_display_iris, vendor_hal_display_iris_hwservice)
+
+allow vendor_hal_display_iris_default graphics_device:dir search;
+allow vendor_hal_display_iris_default graphics_device:chr_file rw_file_perms;
+
+get_prop(vendor_hal_display_iris_default, vendor_display_prop)

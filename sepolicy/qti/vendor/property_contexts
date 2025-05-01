@@ -10,7 +10,8 @@ vendor.oplus.camera.           u:object_r:vendor_camera_prop:s0
 vendor.oppo.camera.            u:object_r:vendor_camera_prop:s0
 
 # Display
-vendor.dps.dump.composerpid    u:object_r:vendor_display_prop:s0
+persist.vendor.display.dc_state    u:object_r:vendor_display_prop:s0
+vendor.dps.dump.composerpid        u:object_r:vendor_display_prop:s0
 
 # eSIM
 ro.vendor.oplus.esim.support    u:object_r:vendor_oplus_esim_prop:s0
