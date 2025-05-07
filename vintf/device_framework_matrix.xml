@@ -146,6 +146,14 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.displaypanelfeature</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayPanelFeature</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.oplus.hardware.esim</name>
         <version>1</version>
@@ -170,6 +178,14 @@
             <name>IOplusImsRadio</name>
             <instance>oplusimsradio0</instance>
             <instance>oplusimsradio1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.mmdisplayfeature</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMMDisplayFeature</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
