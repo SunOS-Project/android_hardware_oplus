@@ -12,6 +12,8 @@ rw_dir_file(hal_audio_default, vendor_sysfs_usb_supply)
 get_prop(hal_audio_default, boot_status_prop)
 get_prop(hal_audio_default, vendor_audio_debug_prop)
 
+set_prop(hal_audio_default, vendor_audio_prop)
+
 userdebug_or_eng(`
   allow hal_audio_default debugfs:dir r_dir_perms;
 ')
