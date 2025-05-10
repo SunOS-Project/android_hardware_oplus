@@ -110,6 +110,19 @@ static const DeviceInfo CONFIG_OP12 = {
     .touchGestureReportNode = OPLUS_TOUCH_GESTURE_REPORT
 };
 
+static const DeviceInfo CONFIG_OP12R = {
+    .supportedFeatures = static_cast<int>(Feature::DC_DIMMING) |
+                         static_cast<int>(Feature::HIGH_SAMPLE_TOUCH),
+    .featureNode = {
+        .dcDimmingNode = ONE_PULSE_NODE,
+        .highTouchSampleNode = OPLUS_TOUCH_HIGH_TOUCH_SAMPLE,
+    },
+    .colorModeMap = COLOR_MODE_MAP_0_256_258_259,
+    .useOplusTouch = true,
+    .touchGestureInitNode = { OPLUS_TOUCH_GESTURE_WITHOUT_S },
+    .touchGestureReportNode = OPLUS_TOUCH_GESTURE_REPORT
+};
+
 static const DeviceInfo CONFIG_OP11 = {
     .supportedFeatures = static_cast<int>(Feature::DC_DIMMING) |
                          static_cast<int>(Feature::HIGH_SAMPLE_TOUCH) |

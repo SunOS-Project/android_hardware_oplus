@@ -62,7 +62,7 @@ static const LevelRangeConfig UNIFIED_LEVEL_RANGE_CONFIG = {
     }
 };
 
-static const LevelRangeConfig LEVEL_RANGE_CONFIG_OP11_12_13 = {
+static const LevelRangeConfig LEVEL_RANGE_CONFIG_OP11_12_12R_13 = {
     .alarmCallLevelRange = {
         .maxLevel = 5,
         .defaultLevel = 4

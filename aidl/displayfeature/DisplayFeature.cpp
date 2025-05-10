@@ -41,6 +41,14 @@ DisplayFeature::DisplayFeature() : mDeviceInfo(nullptr) {
         SetProperty("sys.sun.feature.touch_gesture.oplus", "true");
         goto END;
     }
+    // OnePlus 12R
+    if (deviceName == "aston") {
+        mDeviceInfo = &CONFIG_OP12R;
+        SetProperty("sys.sun.feature.display.dc_alias_one_pulse", "true");
+        SetProperty("sys.sun.feature.touch_gesture.bit", "78068");
+        SetProperty("sys.sun.feature.touch_gesture.oplus", "true");
+        goto END;
+    }
     // OnePlus 11
     if (deviceName == "salami") {
         mDeviceInfo = &CONFIG_OP11;

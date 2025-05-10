@@ -36,6 +36,11 @@ Battery::Battery() : mDeviceInfo(nullptr) {
         mDeviceInfo = &CONFIG_OP12;
         goto END;
     }
+    // OnePlus 12R
+    if (deviceName == "aston") {
+        mDeviceInfo = &CONFIG_OP12R;
+        goto END;
+    }
     // OnePlus 11
     if (deviceName == "salami") {
         mDeviceInfo = &CONFIG_OP11;

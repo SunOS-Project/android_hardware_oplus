@@ -5,6 +5,7 @@
 
 #include "include/StubVibrator.h"
 #include "include/VibratorExt.h"
+#include "include/device/aston_0809.h"
 #include "include/device/dodge_0916t.h"
 #include "include/device/kona_0815.h"
 #include "include/device/lahaina_0809.h"
@@ -40,6 +41,15 @@ VibratorExt::VibratorExt() : mVibrator(nullptr) {
     // OnePlus 12
     if (deviceName == "waffle") {
         mVibrator = new waffle_0916t_vibrator();
+        SetProperty("sys.sun.feature.vibrator.external_control", "true");
+        SetProperty("sys.sun.feature.vibrator.richtap", "true");
+        SetProperty("sys.sun.feature.vibrator.richtap_dev", "/dev/awinic_haptic");
+        SetProperty("sys.sun.feature.vibrator.richtap_config", "/odm/etc/aac_richtap.config");
+        goto END;
+    }
+    // OnePlus 12R
+    if (deviceName == "aston") {
+        mVibrator = new aston_0916_vibrator();
         SetProperty("sys.sun.feature.vibrator.external_control", "true");
         SetProperty("sys.sun.feature.vibrator.richtap", "true");
         SetProperty("sys.sun.feature.vibrator.richtap_dev", "/dev/awinic_haptic");

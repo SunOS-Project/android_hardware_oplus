@@ -1,55 +1,55 @@
 /*
  * Copyright (C) 2025 The Nameless-CLO Project
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
 
 #pragma once
 
 #include "../InputFFVibrator.h"
 
-static const FirmwarePathConfig FIRMWARE_PATH_CONFIG_DODGE = {
-    .crispPathPrefix = "/odm/etc/vibrator/9999/def/effect_",
-    .gentlePathPrefix = "/odm/etc/vibrator/9999/soft/effect_"
+static const FirmwarePathConfig FIRMWARE_PATH_CONFIG_ASTON = {
+    .crispPathPrefix = "/odm/etc/vibrator/809/def/effect_",
+    .gentlePathPrefix = "/odm/etc/vibrator/809/soft/effect_"
 };
 
-static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_DODGE {
+static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_ASTON {
     // AOSP effects
     { Effect::CLICK, {
         .crisp = {
-            .firmware_id = { 4 },
+            .firmware_id = { 1 },
             .min_interval = 80
         },
         .gentle = {
-            .firmware_id = { 309 },
+            .firmware_id = { 1 },
             .min_interval = 80
         }
     }},
     { Effect::DOUBLE_CLICK, {
         .crisp = {
-            .firmware_id = { 8, 8 },
+            .firmware_id = { 1 },
             .sleep_time = { 150 }
         },
         .gentle = {
-            .firmware_id = { 6, 6 },
+            .firmware_id = { 1 },
             .sleep_time = { 150 }
         }
     }},
     { Effect::TICK, {
         .crisp = {
-            .firmware_id = { 309 },
+            .firmware_id = { 2 },
             .min_interval = 120
         },
         .gentle = {
-            .firmware_id = { 309 },
+            .firmware_id = { 2 },
             .min_interval = 120
         }
     }},
     { Effect::THUD, {
         .crisp = {
-            .firmware_id = { 4 }
+            .firmware_id = { 3 }
         },
         .gentle = {
-            .firmware_id = { 309 }
+            .firmware_id = { 3 }
         }
     }},
     { Effect::POP, {
@@ -57,15 +57,15 @@ static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_DODGE {
             .firmware_id = { 4 }
         },
         .gentle = {
-            .firmware_id = { 309 }
+            .firmware_id = { 4 }
         }
     }},
     { Effect::HEAVY_CLICK, {
         .crisp = {
-            .firmware_id = { 8 }
+            .firmware_id = { 5 }
         },
         .gentle = {
-            .firmware_id = { 6 }
+            .firmware_id = { 5 }
         }
     }},
     // Custom effects
@@ -245,26 +245,26 @@ static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_DODGE {
     }},
     { Effect::BACK_GESTURE, {
         .crisp = {
-            .firmware_id = { 309 }
-        },
-        .gentle = {
-            .firmware_id = { 309 }
-        }
-    }},
-    { Effect::BUTTON_CLICK, {
-        .crisp = {
-            .firmware_id = { 112 }
+            .firmware_id = { 2 }
         },
         .gentle = {
             .firmware_id = { 2 }
         }
     }},
-    { Effect::CLEAR_ALL_NOTIFICATION, {
+    { Effect::BUTTON_CLICK, {
         .crisp = {
-            .firmware_id = { 364 }
+            .firmware_id = { 111 }
         },
         .gentle = {
-            .firmware_id = { 364 }
+            .firmware_id = { 111 }
+        }
+    }},
+    { Effect::CLEAR_ALL_NOTIFICATION, {
+        .crisp = {
+            .firmware_id = { 47 }
+        },
+        .gentle = {
+            .firmware_id = { 47 }
         }
     }},
     { Effect::CLEAR_ALL_RECENT, {
@@ -277,33 +277,25 @@ static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_DODGE {
     }},
     { Effect::KEYBOARD_PRESS, {
         .crisp = {
-            .firmware_id = { 8, 8 },
-            .sleep_time = { 100 },
+            .firmware_id = { 111 },
+            .sleep_time = { 111 },
             .min_interval = 80
         },
         .gentle = {
-            .firmware_id = { 6, 6 },
-            .sleep_time = { 100 },
+            .firmware_id = { 111 },
+            .sleep_time = { 111 },
             .min_interval = 80
         }
     }},
     { Effect::PLUG_IN, {
         .crisp = {
-            .firmware_id = { FIRMWARE_ID_MAX + 200, 108 },
+            .firmware_id = { 2, 108 },
             .sleep_time = { 600 }
         },
         .gentle = {
-            .firmware_id = { FIRMWARE_ID_MAX + 200, 108 },
+            .firmware_id = { 2, 108 },
             .sleep_time = { 600 },
             .style = static_cast<uint32_t>(Style::CRISP)
-        }
-    }},
-    { Effect::SCREEN_OFF, {
-        .crisp = {
-            .firmware_id = { 315 }
-        },
-        .gentle = {
-            .firmware_id = { 315 }
         }
     }},
     { Effect::SCREEN_ON, {
@@ -316,62 +308,62 @@ static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_DODGE {
     }},
     { Effect::SCREENSHOT, {
         .crisp = {
-            .firmware_id = { 318 }
-        },
-        .gentle = {
-            .firmware_id = { 318 }
-        }
-    }},
-    { Effect::SLIDER_EDGE, {
-        .crisp = {
-            .firmware_id = { 106 }
-        },
-        .gentle = {
-            .firmware_id = { 106 }
-        }
-    }},
-    { Effect::SLIDER_STEP, {
-        .crisp = {
-            .firmware_id = { 105 },
-            .min_interval = 120
-        },
-        .gentle = {
-            .firmware_id = { 105 },
-            .min_interval = 120
-        }
-    }},
-    { Effect::SWITCH_TOGGLE, {
-        .crisp = {
-            .firmware_id = { 112 }
+            .firmware_id = { 2 }
         },
         .gentle = {
             .firmware_id = { 2 }
         }
     }},
-    { Effect::UNIFIED_ERROR, {
+    { Effect::SLIDER_EDGE, {
         .crisp = {
-            .firmware_id = { 46 }
+            .firmware_id = { 107 }
         },
         .gentle = {
-            .firmware_id = { 46 }
+            .firmware_id = { 107 }
+        }
+    }},
+    { Effect::SLIDER_STEP, {
+        .crisp = {
+            .firmware_id = { 106 },
+            .min_interval = 120
+        },
+        .gentle = {
+            .firmware_id = { 106 },
+            .min_interval = 120
+        }
+    }},
+    { Effect::SWITCH_TOGGLE, {
+        .crisp = {
+            .firmware_id = { 1 }
+        },
+        .gentle = {
+            .firmware_id = { 1 }
+        }
+    }},
+    { Effect::UNIFIED_ERROR, {
+        .crisp = {
+            .firmware_id = { 1 }
+        },
+        .gentle = {
+            .firmware_id = { 1 }
         }
     }},
     { Effect::UNIFIED_SUCCESS, {
         .crisp = {
-            .firmware_id = { 8 }
+            .firmware_id = { 2 }
         },
         .gentle = {
-            .firmware_id = { 6 }
+            .firmware_id = { 2 }
         }
     }}
 };
 
-class dodge_0916t_vibrator : public InputFFVibrator {
+class aston_0916_vibrator : public InputFFVibrator {
 public:
-    dodge_0916t_vibrator() : InputFFVibrator(
+    aston_0916_vibrator() : InputFFVibrator(
         &LEVEL_RANGE_CONFIG_OP11_12_12R_13,
-        &FIRMWARE_PATH_CONFIG_DODGE,
-        EFFECTS_MAP_DODGE
+        &FIRMWARE_PATH_CONFIG_ASTON,
+        EFFECTS_MAP_ASTON
     ) {}
 
     bool isMultipleStyleSupported() override {
@@ -379,6 +371,7 @@ public:
     }
 
     const char* getName() override {
-        return "dodge_0916t_vibrator";
+        return "aston_0916_vibrator";
     }
 };
+ 

@@ -78,6 +78,15 @@ static const DeviceInfo CONFIG_OP12 = {
     .fastChargingStatus = ChargingStatus::VOOC_CHARGING
 };
 
+static const DeviceInfo CONFIG_OP12R = {
+    .supportedFeatures = static_cast<int>(Feature::SUSPEND_CHARGING),
+    .featureNode = {
+        .voocChgingNode = VOOC_CHARING_NODE,
+        .chargingSuspendNode = CHARGING_SUSPEND_NODE
+    },
+    .fastChargingStatus = ChargingStatus::VOOC_CHARGING
+};
+
 static const DeviceInfo CONFIG_OP11 = {
     .supportedFeatures = static_cast<int>(Feature::SUSPEND_CHARGING),
     .featureNode = {
