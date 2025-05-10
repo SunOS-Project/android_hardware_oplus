@@ -91,6 +91,11 @@ Battery::Battery() : mDeviceInfo(nullptr) {
             mDeviceInfo = &CONFIG_EMPTY_FEATURE;
             goto END;
     }
+    // OnePlus Nord CE 4
+    if (deviceName == "benz") {
+        mDeviceInfo = &CONFIG_OPNCE4;
+        goto END;
+    }
 
 END:
     if (DEBUG_ENABLED) {

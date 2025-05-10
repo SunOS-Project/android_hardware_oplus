@@ -159,6 +159,15 @@ static const DeviceInfo CONFIG_OP8P = {
     .fastChargingStatus = ChargingStatus::WARP_CHARGING
 };
 
+static const DeviceInfo CONFIG_OPNCE4 = {
+    .supportedFeatures = static_cast<int>(Feature::SUSPEND_CHARGING),
+    .featureNode = {
+        .voocChgingNode = VOOC_CHARING_NODE,
+        .chargingSuspendNode = CHARGING_SUSPEND_NODE
+    },
+    .fastChargingStatus = ChargingStatus::VOOC_CHARGING
+};
+
 static const DeviceInfo CONFIG_EMPTY_FEATURE = {
     .supportedFeatures = 0,
     .featureNode = {

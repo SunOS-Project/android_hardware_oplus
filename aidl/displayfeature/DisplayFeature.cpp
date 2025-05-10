@@ -82,6 +82,13 @@ DisplayFeature::DisplayFeature() : mDeviceInfo(nullptr) {
         goto END;
     }
 
+    // OnePlus Nord CE 4
+    if (deviceName == "benz") {
+        mDeviceInfo = &CONFIG_OPNCE4;
+        SetProperty("sys.sun.feature.touch_gesture.bit", "78068");
+        goto END;
+    }
+
     ALOGE("device is not unsupported");
     mDeviceInfo = &CONFIG_EMPTY;
     goto END;

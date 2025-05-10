@@ -191,6 +191,16 @@ static const DeviceInfo CONFIG_OP8P = {
     .displayOrientationMap = TP_ORIENTATION_MAP
 };
 
+static const DeviceInfo CONFIG_OPNCE4 = {
+    .supportedFeatures = static_cast<int>(Feature::HBM_MODE) |
+                         static_cast<int>(Feature::HIGH_SAMPLE_TOUCH),
+    .featureNode = {
+        .hbmNode = HBM_NODE,
+        .highTouchSampleNode = HIGH_TOUCH_SAMPLE_NODE
+    },
+    .displayOrientationMap = TP_ORIENTATION_MAP
+};
+
 static const DeviceInfo CONFIG_EMPTY {
     .supportedFeatures = 0
 };
