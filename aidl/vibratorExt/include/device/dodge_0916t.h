@@ -236,10 +236,12 @@ static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_DODGE {
     }},
     { Effect::ALERT_SLIDER_MIDDLE, {
         .crisp = {
-            .firmware_id = { 365 }
+            .firmware_id = { 8, 8 },
+            .sleep_time = { 150 }
         },
         .gentle = {
-            .firmware_id = { 365 },
+            .firmware_id = { 6, 6 },
+            .sleep_time = { 150 },
             .style = static_cast<uint32_t>(Style::CRISP)
         }
     }},
