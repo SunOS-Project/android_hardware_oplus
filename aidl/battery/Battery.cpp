@@ -62,6 +62,12 @@ Battery::Battery() : mDeviceInfo(nullptr) {
         goto END;
     }
 
+    // OnePlus Ace 3 Pro
+    if (deviceName == "corvette") {
+        mDeviceInfo = &CONFIG_OPACE3P;
+        goto END;
+    }
+
     if (prjname <= 0) {
         ALOGE("device prjname is empty");
         mDeviceInfo = &CONFIG_EMPTY_FEATURE;

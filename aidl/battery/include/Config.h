@@ -48,6 +48,15 @@ static const NodeInfo WIRELESS_QUIET_MODE_NEW_NODE = {
     .writeDisableValue = "0"
 };
 
+static const DeviceInfo CONFIG_OPACE3P = {
+    .supportedFeatures = static_cast<int>(Feature::SUSPEND_CHARGING),
+    .featureNode = {
+        .voocChgingNode = VOOC_CHARING_NODE,
+        .chargingSuspendNode = CHARGING_SUSPEND_NODE
+    },
+    .fastChargingStatus = ChargingStatus::VOOC_CHARGING
+};
+
 static const DeviceInfo CONFIG_OP13 = {
     .supportedFeatures = static_cast<int>(Feature::SUSPEND_CHARGING) |
                          static_cast<int>(Feature::WIRELESS_CHARGING_RX) |

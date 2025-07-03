@@ -26,6 +26,13 @@ DisplayFeature::DisplayFeature() : mDeviceInfo(nullptr) {
         ALOGD("device name: %s", deviceName.c_str());
     }
 
+    // OnePlus Ace 3 Pro
+    if (deviceName == "corvette") {
+        mDeviceInfo = &CONFIG_OPACE3P;
+        SetProperty("sys.nameless.feature.touch_gesture.bit", "78068");
+        SetProperty("sys.nameless.feature.touch_gesture.oplus", "true");
+        goto END;
+    }
     // OnePlus 13
     if (deviceName == "dodge") {
         mDeviceInfo = &CONFIG_OP13;

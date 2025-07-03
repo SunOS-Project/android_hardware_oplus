@@ -95,6 +95,20 @@ static const DeviceInfo CONFIG_OP13 = {
     .touchGestureReportNode = OPLUS_TOUCH_GESTURE_REPORT
 };
 
+static const DeviceInfo CONFIG_OPACE3P = {
+    .supportedFeatures = static_cast<int>(Feature::DC_DIMMING) |
+                         static_cast<int>(Feature::HIGH_SAMPLE_TOUCH) |
+                         static_cast<int>(Feature::LTPO),
+    .featureNode = {
+        .dcDimmingNode = ONE_PULSE_NODE,
+        .highTouchSampleNode = OPLUS_TOUCH_HIGH_TOUCH_SAMPLE,
+        .ltpoNode = { LTPO_MIN_FPS_NODE, LTPO_TEST_TE_NODE }
+    },
+    .useOplusTouch = true,
+    .touchGestureInitNode = { OPLUS_TOUCH_DT2W, OPLUS_TOUCH_GESTURE_WITHOUT_S },
+    .touchGestureReportNode = OPLUS_TOUCH_GESTURE_REPORT
+};
+
 static const DeviceInfo CONFIG_OP12 = {
     .supportedFeatures = static_cast<int>(Feature::DC_DIMMING) |
                          static_cast<int>(Feature::HIGH_SAMPLE_TOUCH) |
