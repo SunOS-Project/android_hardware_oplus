@@ -371,7 +371,7 @@ static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_WAFFLE {
 class waffle_0916t_vibrator : public InputFFVibrator {
 public:
     waffle_0916t_vibrator() : InputFFVibrator(
-        &LEVEL_RANGE_CONFIG_OP11_12_12R_13,
+        &LEVEL_RANGE_CONFIG_OP11_12_12R,
         &FIRMWARE_PATH_CONFIG_WAFFLE,
         EFFECTS_MAP_WAFFLE
     ) {}

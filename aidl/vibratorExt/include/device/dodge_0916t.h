@@ -371,7 +371,7 @@ static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_DODGE {
 class dodge_0916t_vibrator : public InputFFVibrator {
 public:
     dodge_0916t_vibrator() : InputFFVibrator(
-        &LEVEL_RANGE_CONFIG_OP11_12_12R_13,
+        &UNIFIED_LEVEL_RANGE_CONFIG,
         &FIRMWARE_PATH_CONFIG_DODGE,
         EFFECTS_MAP_DODGE
     ) {}

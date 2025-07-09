@@ -361,7 +361,7 @@ static std::unordered_map<Effect, CustomEffectStyleSet> EFFECTS_MAP_ASTON {
 class aston_0916_vibrator : public InputFFVibrator {
 public:
     aston_0916_vibrator() : InputFFVibrator(
-        &LEVEL_RANGE_CONFIG_OP11_12_12R_13,
+        &LEVEL_RANGE_CONFIG_OP11_12_12R,
         &FIRMWARE_PATH_CONFIG_ASTON,
         EFFECTS_MAP_ASTON
     ) {}
