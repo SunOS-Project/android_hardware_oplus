@@ -85,8 +85,10 @@ static const std::unordered_map<int, std::string> TP_ORIENTATION_MAP = {
 };
 
 static const DeviceInfo CONFIG_OP13 = {
-    .supportedFeatures = static_cast<int>(Feature::LTPO),
+    .supportedFeatures = static_cast<int>(Feature::DC_DIMMING) |
+                         static_cast<int>(Feature::LTPO),
     .featureNode = {
+        .dcDimmingNode = ONE_PULSE_NODE,
         .ltpoNode = { LTPO_MIN_FPS_NODE, LTPO_TEST_TE_NODE }
     },
     .colorModeMap = COLOR_MODE_MAP_303_301_307,
